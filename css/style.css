@@ -1,4 +1,3 @@
-/* css/style.css */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -15,7 +14,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #1a202c;
     color: #fff;
     position: fixed;
     width: 100%;
@@ -30,7 +29,7 @@ nav {
     padding: 15px 0;
 }
 
-.logo {
+nav h1 {
     font-size: 1.5em;
     margin: 0;
 }
@@ -49,28 +48,35 @@ nav {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #63b3ed;
 }
 
 #hero {
-    background-color: #007bff;
+    background: linear-gradient(to right, #2b6cb0, #9f7aea);
     color: #fff;
     text-align: center;
     padding: 100px 0 50px;
-    margin-top: 60px; /* Offset for fixed header */
+    margin-top: 60px;
 }
 
 .hero-content {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 }
 
 .profile-img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin-right: 20px;
     object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 section {
@@ -80,6 +86,20 @@ section {
 h2 {
     text-align: center;
     margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+.project-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .blog-posts {
@@ -92,7 +112,12 @@ article {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+article:hover {
+    transform: scale(1.05);
 }
 
 form {
@@ -107,16 +132,28 @@ input, textarea {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #2b6cb0;
+    outline: none;
 }
 
 .btn {
-    background-color: #007bff;
+    background-color: #2b6cb0;
     color: #fff;
     padding: 10px 20px;
-    text-decoration: none;
+    border: none;
     border-radius: 4px;
-    display: inline-block;
+    cursor: pointer;
     text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #9f7aea;
+    transform: scale(1.05);
 }
 
 .social-links {
@@ -126,13 +163,23 @@ input, textarea {
 
 .social-links a {
     margin: 0 10px;
-    color: #007bff;
+    color: #2b6cb0;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #9f7aea;
 }
 
 footer {
-    background-color: #333;
+    background-color: #1a202c;
     color: #fff;
     text-align: center;
     padding: 20px 0;
+}
+
+#visualization {
+    margin-top: 20px;
+    text-align: center;
 }
